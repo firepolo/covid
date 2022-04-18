@@ -1,0 +1,16 @@
+Couleurs:
+	- COVID
+		- #000091 (bleu)
+		- #139b62 (vert)
+		- #d6e6d8 (vert clair)
+		- #ffffff (blanc)
+	- Ministère
+		- #283473 (bleu)
+		- #013971 (bleu foncé)
+		- #74b9fd (bleu clair)
+		- #333333 (gris foncé)
+		- #d7d7d7 (gris clair)
+		- #ffffff (blanc)
+
+Polices:
+	- Roboto

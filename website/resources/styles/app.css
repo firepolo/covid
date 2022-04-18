@@ -1,0 +1,183 @@
+:root {
+	--bs-body-font-family: 'Roboto', sans-serif;
+	--primary: #139b62;
+	--secondary: #000091;
+}
+
+@import '@fontsource/roboto';
+@import 'bootstrap';
+
+/*
+Animations
+*/
+@keyframes rebound {
+	0% { transform: translateY(0%); }
+	50% { transform: translateY(-50%); }
+	100% { transform: translateY(0%); }
+}
+
+/*
+Adjustment for mobile
+*/
+@media (max-width: 599px) {
+	.reverse-on-mobile {
+		flex-direction: column-reverse;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-nav {
+		align-items: center;
+	}
+}
+
+/*
+Body & basic elements
+*/
+html,
+body {
+	font-size: 18px;
+}
+
+/*
+Title
+*/
+h1 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: var(--primary);
+	margin: 2rem 0;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--secondary);
+	margin: 2rem 0;
+}
+
+/*
+Links
+*/
+.link-blank a {
+	color: #fff;
+}
+
+.link-blank a:hover {
+	text-decoration: none;
+}
+
+/*
+Navigation
+*/
+.nav-link {
+	color: var(--secondary) !important;
+	font-weight: 800;
+}
+
+.nav-link:hover,
+.nav-link.active {
+	color: var(--primary) !important;
+}
+
+/*
+Button block
+*/
+.wp-block-button,
+.wp-block-button__link,
+.wpcf7-submit {
+	background-color: var(--primary) !important;
+	border: none !important;
+	border-radius: 5px !important;
+	transition: all .25s;
+}
+
+.wp-block-button:hover,
+.wp-block-button__link:hover,
+.wpcf7-submit:hover {
+	background-color: var(--secondary) !important;
+}
+
+.wpcf7-submit {
+	color: #fff;
+	padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+Contact form
+*/
+input {
+	border: 1px solid #888;
+	border-radius: 5px;
+	padding: 0.25rem 0.5rem;
+}
+
+label, input:not([type="submit"]) {
+	width: 100%;
+}
+
+.wpcf7-response-output {
+	padding: 1rem 0 !important;
+	text-align: center;
+	color: #fff;
+	border: none !important;
+	box-shadow: 0px 1px 5px #ccc;
+	animation: rebound .25s linear;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	background-color: #d4edda;
+	color: #155724;
+}
+ 
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+    background-color: #f8d7da;
+	color: #721c24;
+}
+ 
+.wpcf7 form.spam .wpcf7-response-output {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+ 
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    background-color: #fff3cd;
+	color: #856404;
+}
+
+/*
+Accordion block
+*/
+.accordion-body {
+	padding: 1rem 1.5rem;
+}
+
+.accordion-button {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 800;
+	box-shadow: none !important;
+}
+
+.accordion-button.collapsed:hover,
+.accordion-button:not(.collapsed) {
+	color: var(--primary);
+	background-color: transparent;
+}
+
+.accordion-button.collapsed {
+	color: var(--secondary);
+}
+
+/*
+Footer
+*/
+.page-footer {
+	background-color: var(--primary);
+}
+
+.copyright {
+	color: #fff;
+}
